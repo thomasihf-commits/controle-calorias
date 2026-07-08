@@ -1,7 +1,7 @@
 export const CONFIG = {
     APP: {
         NAME: "Controle de Calorias",
-        VERSION: "0.1.0"
+        VERSION: "0.3.0"
     },
 
     SUPABASE: {

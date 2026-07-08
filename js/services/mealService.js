@@ -53,6 +53,8 @@ export function saveMeal(meal) {
     description: meal.description?.trim() || "Refeição",
     observation: meal.observation?.trim() || "",
     photoDataUrl: meal.photoDataUrl || "",
+    macros: meal.macros || { proteinas: 0, carboidratos: 0, gorduras: 0 },
+    aiAnalysis: meal.aiAnalysis || null,
     createdAt: now.toISOString()
   };
 

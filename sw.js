@@ -1,4 +1,4 @@
-const CACHE_NAME = "controle-calorias-v2";
+const CACHE_NAME = "controle-calorias-v3";
 
 const APP_SHELL = [
   "./",
@@ -17,6 +17,7 @@ const APP_SHELL = [
   "./js/controllers/historyController.js",
   "./js/controllers/profileController.js",
   "./js/services/mealService.js",
+  "./js/services/aiService.js",
   "./views/login.html",
   "./views/dashboard.html",
   "./views/meal.html",

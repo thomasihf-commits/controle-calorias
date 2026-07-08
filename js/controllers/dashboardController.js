@@ -33,6 +33,7 @@ function renderMealList(meals) {
       <div class="meal-info">
         <strong>${meal.description}</strong>
         <span>${getMealTypeLabel(meal.type)}</span>
+        ${meal.macros ? `<small>P ${Math.round(meal.macros.proteinas || 0)}g • C ${Math.round(meal.macros.carboidratos || 0)}g • G ${Math.round(meal.macros.gorduras || 0)}g</small>` : ""}
         ${meal.observation ? `<small>${meal.observation}</small>` : ""}
       </div>
       <div class="meal-actions">

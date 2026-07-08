@@ -2,7 +2,7 @@
   <header class="mobile-header">
     <div>
       <p class="greeting">Nova refeição</p>
-      <h1>Registrar</h1>
+      <h1>Analisar</h1>
     </div>
 
     <button id="btnBackDashboard" class="icon-button" title="Voltar">←</button>
@@ -18,16 +18,42 @@
       <option value="outro">Outro</option>
     </select>
 
+    <label class="form-label" for="mealPhoto">Foto do prato ou bebida</label>
+    <input id="mealPhoto" class="form-input" type="file" accept="image/*" capture="environment" />
+
+    <div id="photoPreview" class="photo-preview hidden"></div>
+
+    <button id="btnAnalyzeMeal" class="secondary-button full-width large-button ai-button" disabled>🤖 Analisar com IA</button>
+    <p id="aiStatus" class="helper-text hidden"></p>
+
+    <div id="aiResultCard" class="ai-result-card hidden">
+      <div class="section-title-row">
+        <h2>Resultado da IA</h2>
+        <span id="confidencePill" class="muted-pill">--</span>
+      </div>
+      <div id="aiItemsList" class="ai-items-list"></div>
+    </div>
+
     <label class="form-label" for="mealDescription">Descrição</label>
     <input id="mealDescription" class="form-input" type="text" placeholder="Ex: arroz, feijão, frango e salada" />
 
     <label class="form-label" for="mealCalories">Calorias estimadas</label>
     <input id="mealCalories" class="form-input" type="number" min="0" inputmode="numeric" placeholder="Ex: 650" />
 
-    <label class="form-label" for="mealPhoto">Foto do prato ou bebida</label>
-    <input id="mealPhoto" class="form-input" type="file" accept="image/*" capture="environment" />
-
-    <div id="photoPreview" class="photo-preview hidden"></div>
+    <div class="macro-grid">
+      <div>
+        <label class="form-label" for="mealProtein">Proteínas</label>
+        <input id="mealProtein" class="form-input" type="number" min="0" inputmode="decimal" placeholder="g" />
+      </div>
+      <div>
+        <label class="form-label" for="mealCarbs">Carboidratos</label>
+        <input id="mealCarbs" class="form-input" type="number" min="0" inputmode="decimal" placeholder="g" />
+      </div>
+      <div>
+        <label class="form-label" for="mealFat">Gorduras</label>
+        <input id="mealFat" class="form-input" type="number" min="0" inputmode="decimal" placeholder="g" />
+      </div>
+    </div>
 
     <label class="form-label" for="mealObservation">Observação</label>
     <textarea id="mealObservation" class="form-input" rows="3" placeholder="Ex: tinha refrigerante, molho extra, sobremesa..."></textarea>
