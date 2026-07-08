@@ -6,7 +6,13 @@ const routes = {
   dashboard: {
     view: "./views/dashboard.html",
     controller: () => import("./controllers/dashboardController.js")
-  }
+  },
+  
+  meal: {
+    view: "./views/meal.html",
+    controller: () => import("./controllers/mealController.js")
+}
+
 };
 
 export async function navigateTo(routeName, params = {}) {

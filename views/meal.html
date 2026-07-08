@@ -1,0 +1,35 @@
+<section class="app-shell meal-screen">
+  <header class="mobile-header">
+    <div>
+      <p class="greeting">Nova refeição</p>
+      <h1>Registrar</h1>
+    </div>
+
+    <button id="btnBackDashboard" class="icon-button" title="Voltar">
+      ←
+    </button>
+  </header>
+
+  <section class="summary-card">
+    <label class="form-label" for="mealType">Tipo da refeição</label>
+    <select id="mealType" class="form-input">
+      <option value="cafe">Café da manhã</option>
+      <option value="almoco">Almoço</option>
+      <option value="lanche">Lanche</option>
+      <option value="jantar">Jantar</option>
+      <option value="outro">Outro</option>
+    </select>
+
+    <label class="form-label" for="mealPhoto">Foto do prato ou bebida</label>
+    <input id="mealPhoto" class="form-input" type="file" accept="image/*" capture="environment" />
+
+    <div id="photoPreview" class="photo-preview hidden"></div>
+
+    <label class="form-label" for="mealObservation">Observação</label>
+    <textarea id="mealObservation" class="form-input" rows="3" placeholder="Ex: tinha refrigerante, molho extra, sobremesa..."></textarea>
+
+    <button id="btnSaveMeal" class="primary-button full-width large-button">
+      Salvar refeição
+    </button>
+  </section>
+</section>
