@@ -7,12 +7,18 @@ const routes = {
     view: "./views/dashboard.html",
     controller: () => import("./controllers/dashboardController.js")
   },
-  
   meal: {
     view: "./views/meal.html",
     controller: () => import("./controllers/mealController.js")
-}
-
+  },
+  history: {
+    view: "./views/history.html",
+    controller: () => import("./controllers/historyController.js")
+  },
+  profile: {
+    view: "./views/profile.html",
+    controller: () => import("./controllers/profileController.js")
+  }
 };
 
 export async function navigateTo(routeName, params = {}) {
@@ -25,14 +31,22 @@ export async function navigateTo(routeName, params = {}) {
 
   const app = document.getElementById("app");
 
-  const response = await fetch(route.view);
-  const html = await response.text();
+  try {
+    const response = await fetch(route.view);
 
-  app.innerHTML = html;
+    if (!response.ok) {
+      throw new Error(`Erro ao carregar view: ${route.view}`);
+    }
 
-  const controllerModule = await route.controller();
+    app.innerHTML = await response.text();
 
-  if (controllerModule && typeof controllerModule.init === "function") {
-    controllerModule.init(params);
+    const controllerModule = await route.controller();
+
+    if (controllerModule && typeof controllerModule.init === "function") {
+      controllerModule.init(params);
+    }
+  } catch (error) {
+    console.error(error);
+    app.innerHTML = `<section class="app-shell"><div class="empty-state">Não foi possível carregar a tela.</div></section>`;
   }
 }

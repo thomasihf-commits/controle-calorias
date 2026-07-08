@@ -10,17 +10,17 @@
 
 ## Dashboard
 
-- [ ] Saudação dinâmica
-- [ ] Barra de progresso
-- [ ] Meta diária
+- [x] Saudação dinâmica
+- [x] Barra de progresso
+- [x] Meta diária
 - [ ] Última refeição
 
 ## Refeições
 
-- [ ] Nova refeição
-- [ ] Upload de foto
+- [x] Nova refeição
+- [x] Upload de foto
 - [ ] Galeria
-- [ ] Exclusão
+- [x] Exclusão
 - [ ] Edição
 
 ## IA
@@ -39,5 +39,5 @@
 
 - [ ] Peso
 - [ ] Altura
-- [ ] Meta
+- [x] Meta
 - [ ] Objetivo
