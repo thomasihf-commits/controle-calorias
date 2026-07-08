@@ -1,0 +1,26 @@
+<section class="app-shell profile-screen">
+  <header class="mobile-header">
+    <div>
+      <p class="greeting">Perfil</p>
+      <h1>Meta diária</h1>
+    </div>
+
+    <button id="btnBackDashboard" class="icon-button" title="Voltar">←</button>
+  </header>
+
+  <section class="summary-card">
+    <label class="form-label" for="dailyGoalInput">Meta de calorias por dia</label>
+    <input id="dailyGoalInput" class="form-input" type="number" min="1" inputmode="numeric" />
+
+    <button id="btnSaveGoal" class="primary-button full-width large-button">Salvar meta</button>
+
+    <p class="helper-text">Nesta sprint os dados ficam salvos no próprio celular. Depois ligamos isso ao banco/Supabase.</p>
+  </section>
+
+  <nav class="bottom-nav">
+    <button class="nav-item" data-route="dashboard">Hoje</button>
+    <button class="nav-item" data-route="meal">Nova</button>
+    <button class="nav-item" data-route="history">Histórico</button>
+    <button class="nav-item active" data-route="profile">Perfil</button>
+  </nav>
+</section>

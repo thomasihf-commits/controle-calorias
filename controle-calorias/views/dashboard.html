@@ -1,0 +1,48 @@
+<section class="app-shell dashboard-screen">
+  <header class="mobile-header">
+    <div>
+      <p class="greeting" id="todayLabel">Hoje</p>
+      <h1 id="dashboardTitle">Olá</h1>
+    </div>
+
+    <button id="btnLogout" class="icon-button" title="Sair">⏻</button>
+  </header>
+
+  <section class="summary-card">
+    <div class="summary-label">🔥 Consumido hoje</div>
+
+    <div class="summary-value">
+      <span id="todayCalories">0</span>
+      <small>kcal</small>
+    </div>
+
+    <div class="progress-wrapper">
+      <div class="progress-bar">
+        <div id="progressFill" class="progress-fill" style="width: 0%;"></div>
+      </div>
+      <div class="progress-info">
+        <span id="dailyGoal">Meta 2000 kcal</span>
+        <span id="remainingCalories">Restam 2000 kcal</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="quick-actions">
+    <button id="btnNewMeal" class="primary-button full-width large-button">📷 Nova refeição</button>
+  </section>
+
+  <section class="section-block">
+    <div class="section-title-row">
+      <h2>Refeições de hoje</h2>
+      <span id="todayMealsCount" class="muted-pill">0</span>
+    </div>
+    <div id="todayMealsList" class="meal-list"></div>
+  </section>
+
+  <nav class="bottom-nav">
+    <button class="nav-item active" data-route="dashboard">Hoje</button>
+    <button class="nav-item" data-route="meal">Nova</button>
+    <button class="nav-item" data-route="history">Histórico</button>
+    <button class="nav-item" data-route="profile">Perfil</button>
+  </nav>
+</section>

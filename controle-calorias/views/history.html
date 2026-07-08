@@ -1,0 +1,30 @@
+<section class="app-shell history-screen">
+  <header class="mobile-header">
+    <div>
+      <p class="greeting">Histórico</p>
+      <h1>Refeições</h1>
+    </div>
+
+    <button id="btnBackDashboard" class="icon-button" title="Voltar">←</button>
+  </header>
+
+  <section class="summary-card compact-card">
+    <label class="form-label" for="historyDate">Filtrar por data</label>
+    <input id="historyDate" class="form-input" type="date" />
+  </section>
+
+  <section class="section-block">
+    <div class="section-title-row">
+      <h2 id="historyTitle">Todas as refeições</h2>
+      <span id="historyTotal" class="muted-pill">0 kcal</span>
+    </div>
+    <div id="historyList" class="meal-list"></div>
+  </section>
+
+  <nav class="bottom-nav">
+    <button class="nav-item" data-route="dashboard">Hoje</button>
+    <button class="nav-item" data-route="meal">Nova</button>
+    <button class="nav-item active" data-route="history">Histórico</button>
+    <button class="nav-item" data-route="profile">Perfil</button>
+  </nav>
+</section>
